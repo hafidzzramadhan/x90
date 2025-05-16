@@ -49,6 +49,9 @@ dependencies {
     // Core Android & Lifecycle
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
+    implementation("androidx.compose.material3:material3:1.2.0")
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
+
 
     // Compose core
     implementation(platform(libs.androidx.compose.bom))

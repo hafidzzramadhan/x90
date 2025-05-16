@@ -35,7 +35,7 @@ fun LoginScreen(navController: NavController) {
             modifier = Modifier
                 .size(300.dp)
                 .align(Alignment.TopStart)
-                .offset(x = (-40).dp, y = (-40).dp)
+                .offset(x = (-60).dp, y = (-40).dp)
         )
 
         // Ornamen kanan bawah
@@ -44,7 +44,7 @@ fun LoginScreen(navController: NavController) {
             contentDescription = null,
             contentScale = ContentScale.Fit,
             modifier = Modifier
-                .size(650.dp)
+                .size(600.dp)
                 .align(Alignment.BottomEnd)
                 .offset(x = 140.dp, y = 20.dp)
         )
@@ -54,20 +54,21 @@ fun LoginScreen(navController: NavController) {
             painter = painterResource(id = R.drawable.logo),
             contentDescription = "Logo",
             modifier = Modifier
-                .size(170.dp)
+                .size(215.dp)
                 .align(Alignment.TopCenter)
-                .offset(y = 80.dp)
+                .offset(y = 65.dp)
         )
-
 
         // Card utama
         Card(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(horizontal = 42.dp)
-                .align(Alignment.Center),
+                .padding(horizontal = 28.dp)
+                .heightIn(min = 100.dp)
+                .padding(top = 300.dp)
+                .align(Alignment.TopCenter),
             shape = RoundedCornerShape(45.dp),
-            elevation = CardDefaults.cardElevation(defaultElevation = 8.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 10.dp),
             colors = CardDefaults.cardColors(containerColor = Color.White)
         ) {
             Column(
@@ -76,6 +77,8 @@ fun LoginScreen(navController: NavController) {
                     .padding(horizontal = 24.dp, vertical = 40.dp),
                 horizontalAlignment = Alignment.CenterHorizontally
             ) {
+                Spacer(modifier = Modifier.height(45.dp))
+
                 // Email
                 TextField(
                     value = email,
@@ -104,7 +107,7 @@ fun LoginScreen(navController: NavController) {
                     modifier = Modifier.fillMaxWidth()
                 )
 
-                Spacer(modifier = Modifier.height(15.dp))
+                Spacer(modifier = Modifier.height(70.dp))
 
                 // Tombol Login
                 Button(
@@ -116,8 +119,9 @@ fun LoginScreen(navController: NavController) {
                     shape = RoundedCornerShape(50),
                     colors = ButtonDefaults.buttonColors(containerColor = Color.Black),
                     modifier = Modifier
-                        .fillMaxWidth()
+                        .width(160.dp)
                         .height(48.dp)
+                        .align(Alignment.CenterHorizontally) // ⬅️ agar tombol di tengah
                 ) {
                     Text("Log in", color = Color.White)
                 }

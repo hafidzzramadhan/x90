@@ -22,5 +22,9 @@ fun AppNavHost() {
         composable("login") {
             LoginScreen(navController)
         }
+
+        composable("dashboard"){
+            DashboardScreen(navController)
+        }
     }
 }
